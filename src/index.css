@@ -26,38 +26,67 @@ body {
   background-color: var(--gray-900);
 }
 
-#timer {
-  font-size: 5rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
 }
 
+#edit-button {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+#edit-button img {
+  width: 20px;
+}
+
+#timer {
+  font-size: 5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 #control-bar {
-  width: 350px;
-  height: 50px;
+  width: 30rem;
+  height: 4rem;
   display: flex;
   padding: 9px;
+  margin-top: 0.5rem;
   border-radius: 30px;
-  justify-content: space-around;
   align-items: center;
-  background-color: var(--gray-800);
+  background-color: transparent;
 }
 
 #control-bar div {
+  display: flex;
   width: 33.3%;
+  height: 100%;
   cursor: pointer;
   border: none;
-  padding: 10px;
-  text-align: center;
-  background-color: transparent;
+  justify-content: center;
+  align-items: center;
   color: var(--gray-50);
   font-weight: bold;
-  border-right: solid 1px var(--gray-900);
-}
-
-#control-bar div:nth-child(3) {
-  border-right: 0;
 }
 
 #control-bar div img {
   height: 17px;
+  margin-right: 1rem;
+}
+
+#start-button {
+  background-color: green;
+  border-radius: 10px 0 0 10px;
+}
+
+#stop-button {
+  background-color: orange;
+}
+
+#restart-button {
+  background-color: red;
+  border-radius: 0 10px 10px 0;
 }

@@ -14,4 +14,8 @@ export const secondsToTimePresentation = (timeInSeconds) => {
   return `${minutesPresentation}:${secondsPresentation}`;
 };
 
-export const presentationTimeToSeconds = (timeString) => {};
+export const presentationTimeToSeconds = (timeString) => {
+  const [minutes, seconds] = timeString.split(":");
+
+  return minutesToSeconds(parseInt(minutes)) + parseInt(seconds);
+};

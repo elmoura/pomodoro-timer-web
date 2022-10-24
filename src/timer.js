@@ -50,17 +50,12 @@ export class Timer {
     );
   };
 
-  setTime(time) {
-    if (!time) {
+  setTime = (timeInSeconds) => {
+    if (!timeInSeconds) {
       throw new Error('You must provide a "time" value to Timer.setTime()');
     }
 
-    const [minutes, seconds] = time.split(":");
-
-    const timeInSeconds =
-      minutesToSeconds(parseInt(minutes)) + parseInt(seconds);
-
     this.initialTime = timeInSeconds;
     this.timeInSeconds = timeInSeconds;
-  }
+  };
 }

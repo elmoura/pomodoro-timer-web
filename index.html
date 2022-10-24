@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+
+    <link rel="stylesheet" href="src/index.css" />
+
+    <title>Pomodoro Timer</title>
   </head>
   <body>
     <div id="app">
-        <span id="timer"></span>
-
-      <div id="control-bar">
-        <div id="start-button">
-        <img src="public/play-bold.svg" alt="Ícone de play">
-          Começar
-        </div>
-  
-        <div id="stop-button">
-          <img src="public/pause-bold.svg" alt="Ícone de pausa">
-          Pausar
+      <div class="container">
+        <div id="edit-button">
+          <img src="src/assets/pencil-bold.svg" alt="Ícone de Edição" />
+          Editar
         </div>
 
-        <div id="restart-button">
-          <img src="public/arrow-counter-clockwise-bold.svg" alt="Ícone de recomeço">
-          Recomeçar
+        <span id="timer" contenteditable></span>
+
+        <div id="control-bar">
+          <div id="start-button">
+            <img src="src/assets/play-bold.svg" alt="Ícone de play" />
+            Começar
+          </div>
+
+          <div id="stop-button">
+            <img src="src/assets/pause-bold.svg" alt="Ícone de pausa" />
+            Pausar
+          </div>
+
+          <div id="restart-button">
+            <img
+              src="src/assets/arrow-counter-clockwise-bold.svg"
+              alt="Ícone de recomeço"
+            />
+            Recomeçar
+          </div>
         </div>
       </div>
     </div>
