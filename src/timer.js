@@ -39,15 +39,14 @@ export class Timer {
   decrementTime = () => {
     this.timeInSeconds = this.timeInSeconds - 1;
 
+    const timerElement = document.getElementById("timer");
+
     if (this.timeInSeconds === 0) {
       this.stopCounting();
+      alert("Opa, seu tempo de foco acabou! Vai descansar um pouco ;)");
     }
 
-    console.log("timer: ", this.timeInSeconds);
-
-    document.getElementById("timer").innerText = secondsToTimePresentation(
-      this.timeInSeconds
-    );
+    timerElement.innerText = secondsToTimePresentation(this.timeInSeconds);
   };
 
   setTime = (timeInSeconds) => {
