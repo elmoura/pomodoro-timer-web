@@ -33,13 +33,9 @@ editButton.addEventListener("click", () => {
 });
 
 timerElement.addEventListener("blur", () => {
-  timerElement.style.border = "none";
-
   const maskedValue = maskedTimer.value;
 
-  console.log({ currentTime, maskedValue });
-
-  if (maskedValue === currentTime) return;
+  if (maskedValue === currentTime || maskedValue === "00:00") return;
 
   const timeInSeconds = presentationTimeToSeconds(maskedValue);
   timer.setTime(timeInSeconds);
