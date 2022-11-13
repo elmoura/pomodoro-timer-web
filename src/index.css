@@ -9,6 +9,15 @@
   --gray-50: #fafafa;
   --gray-800: #374151;
   --gray-900: #111827;
+
+  --red-500: #fa4444;
+  --red-600: #ff0000;
+
+  --yellow-300: rgb(255, 208, 0);
+  --yellow-400: #ffe604;
+
+  --green-400: #38d438d5;
+  --green-500: #15c71e;
 }
 
 body {
@@ -41,6 +50,11 @@ body {
   align-items: center;
   font-size: 1rem;
   padding: 1rem 1rem 0 1rem;
+}
+
+#edit-button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
 }
 
 #edit-button img {
@@ -76,21 +90,58 @@ body {
   margin-top: 2rem;
 }
 
+#control-bar div:hover {
+  transform: scale(1.06);
+  transition: 0.23s ease-in;
+}
+
 #control-bar div img {
   height: 17px;
   margin-right: 0.4rem;
 }
 
 #start-button {
-  background-color: green;
+  background-color: var(--green-400);
   border-radius: 10px 0 0 10px;
 }
 
+#start-button:hover {
+  background-color: var(--green-500);
+}
+
 #stop-button {
-  background-color: orange;
+  background-color: var(--yellow-300);
+}
+
+#stop-button:hover {
+  background-color: var(--yellow-400);
 }
 
 #restart-button {
-  background-color: red;
+  background-color: var(--red-500);
   border-radius: 0 10px 10px 0;
+}
+
+#restart-button:hover {
+  background-color: var(--red-600);
+}
+
+#start-button:hover {
+  background-color: var(--green-500);
+}
+
+@media screen and (max-width: 700px) {
+  #timer {
+    font-size: 4.5rem;
+  }
+
+  #control-bar {
+    width: 22rem;
+    font-size: 0.9rem;
+  }
+
+  #control-bar div img {
+    height: 0.9rem;
+    margin-right: 0.4rem;
+  }
 }
